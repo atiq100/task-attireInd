@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import Header from "../../Header/Header";
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeLink =
@@ -7,7 +8,9 @@ const Nav = () => {
   const normalLink = "";
 
   return (
-    <div className="bg-base-100">
+    <div>
+        <Header></Header>
+        <div className="bg-base-100">
       <div className="px-4 py-6 mx-auto lg:py-8 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between lg:justify-center lg:space-x-16">
           <ul className="flex items-center hidden space-x-8 lg:flex">
@@ -216,6 +219,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
